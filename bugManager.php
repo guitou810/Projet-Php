@@ -4,6 +4,7 @@ include 'bug.php';
 
 class bugManager {
     private $_bugs;
+    private $_ressource;
     
     function get_bugs() {
         return $this->_bugs;
@@ -17,8 +18,16 @@ class bugManager {
         $this->_bugs = $_bugs;
     }
 //Obejctif : chargé en mémoire ce qu'il ce trouve en source de données 
+// récupéerer CSV -> Parser le CSV -> pour chaque ligne créer un nouveau bug et insérer le bug dans $this->_bugs
     function load() {
+       $_ressource = fopen('data.txt', 'rb');
        
+       while(!feof($_ressource)){
+                $_ligne = fgets($_ressource);
+                list($_id,$_des) = explode(';',$_ligne);
+                $Bug = new Bug($_id,$_des);
+                $this->_bugs[]=$Bug;
+            }
     }
 // Ajouter un bug à la liste
     function add(Bug $_bug) {
