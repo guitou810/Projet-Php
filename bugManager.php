@@ -1,13 +1,19 @@
 <?php
 
 include 'bug.php';
+include 'ConnexionBDD.php';
 
 class bugManager {
     private $_bugs = [];
     private $_ressource;
+    private $_id;
     
     function get_bugs() {
         return $this->_bugs;
+    }
+    function get_bug_id($_id){
+        return $this->_bugs[array_search($_id,$this->_bugs)];
+        
     }
 
     function set_bugs($_bugs) {
@@ -19,7 +25,7 @@ class bugManager {
     }
 //Obejctif : chargé en mémoire ce qu'il ce trouve en source de données 
 // récupéerer CSV -> Parser le CSV -> pour chaque ligne créer un nouveau bug et insérer le bug dans $this->_bugs
-    function load() {
+    function loadcsv() {
        $_ressource = fopen('data.txt', 'rb');
        
        while(!feof($_ressource)){
@@ -28,6 +34,17 @@ class bugManager {
                 $Bug = new Bug($_id,$_des);
                 $this->_bugs[]=$Bug;
             }
+        return $this->_bugs;
+    }
+    // load sur base de données
+    function load(){
+        $Connect = new Connect();
+        $dbh = new PDO('mysql:host=localhost;dbname='.$Connect->getTable().';charset=utf8', $Connect->get_user(), $Connect->get_passwd());
+        $bugs = $dbh->query('SELECT * FROM `bug` ORDER BY `id`',PDO::FETCH_ASSOC);
+        while($donnees = $bugs->fetch()){     
+               $Bug = new Bug($donnees['id'],$donnees['titre'],$donnees['desc'],$donnees['status']);
+               $this->_bugs[]=$Bug;
+        }
         return $this->_bugs;
     }
 // Ajouter un bug à la liste

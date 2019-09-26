@@ -3,6 +3,10 @@
 class Bug {
     private $_id;
     private $_description;
+    private $_title ;
+    private $_status;
+            
+            
     
     public function getId (){
         return $this->_id;
@@ -21,10 +25,29 @@ class Bug {
        $this->_description = $_description;
 }
 
-    function __construct($_id, $_description) {
+    function __construct($_id, $_description, $_title, $_status) {
         $this->_id = $_id;
+        $this->_title = $_title;
         $this->_description = $_description;
+        $this->_status = $_status;
+        
 }
+function get_status() {
+    return $this->_status;
+}
+
+function set_status($_status) {
+    $this->_status = $_status;
+}
+
+function get_title() {
+    return $this->_title;
+}
+
+function set_title($_title) {
+    $this->_title = $_title;
+}
+
 
 
 }
