@@ -9,7 +9,7 @@ class Bug {
         
 }
     public function getDescription (){
-        return $this->_Description;
+        return $this->_description;
         
 }
     

@@ -3,7 +3,7 @@
 include 'bug.php';
 
 class bugManager {
-    private $_bugs;
+    private $_bugs = [];
     private $_ressource;
     
     function get_bugs() {
@@ -28,6 +28,7 @@ class bugManager {
                 $Bug = new Bug($_id,$_des);
                 $this->_bugs[]=$Bug;
             }
+        return $this->_bugs;
     }
 // Ajouter un bug à la liste
     function add(Bug $_bug) {
