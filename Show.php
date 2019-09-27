@@ -4,7 +4,7 @@ $id = $_GET['id'];
 $Bugs = [];
 $bugmanager = new bugManager($Bugs);
 $Bugs = $bugmanager->load();
-$Bugs = $bugmanager->get_bug_id($id);
+$Bugss = $bugmanager->get_bug_id($id-1);
 
 
 ?>
@@ -18,12 +18,12 @@ $Bugs = $bugmanager->get_bug_id($id);
         echo 
           "<div class='form-example' style='width:100%'>
         <label for='name'>Title: </label>
-            ".$Bugs->get_title()."
+            ".$Bugss->get_title()."
         </div>
         
         <div class='form-example' style='width:100%'>
         <label for='name'>Description: </label>
-            ".$Bugs->getDescription()."
+            ".$Bugss->getDescription()."
         </div>"
 
         ?>

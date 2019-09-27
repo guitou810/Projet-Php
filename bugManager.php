@@ -12,7 +12,7 @@ class bugManager {
         return $this->_bugs;
     }
     function get_bug_id($_id){
-        return $this->_bugs[array_search($_id,$this->_bugs)];
+        return $this->_bugs[$_id];
         
     }
 
@@ -42,7 +42,7 @@ class bugManager {
         $dbh = new PDO('mysql:host=localhost;dbname='.$Connect->getTable().';charset=utf8', $Connect->get_user(), $Connect->get_passwd());
         $bugs = $dbh->query('SELECT * FROM `bug` ORDER BY `id`',PDO::FETCH_ASSOC);
         while($donnees = $bugs->fetch()){     
-               $Bug = new Bug($donnees['id'],$donnees['titre'],$donnees['desc'],$donnees['status']);
+               $Bug = new Bug($donnees['id'],$donnees['titre'],$donnees['description'],$donnees['status']);
                $this->_bugs[]=$Bug;
         }
         return $this->_bugs;
