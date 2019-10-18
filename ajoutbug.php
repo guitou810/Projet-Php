@@ -1,8 +1,10 @@
 <?php
 include 'ConnexionBDD.php';
-
-
-
+include 'bugManager.php';
+$bugmanager = new bugManager();
+if(isset($_POST['Soummettre'])){
+    $Bugs = $bugmanager->add();
+}
 
 ?>
 <html>
@@ -60,6 +62,10 @@ textarea {
     <legend>Description<em>*</em></legend>
       <textarea id="comments" rows="10" cols="40" name="Description"></textarea>
   </fieldset>
+  <fieldset>
+    <legend>Date<em>*</em></legend>
+    <input type="date" value="2018-07-22">
+  </fieldset>
     <fieldset>
     <legend>Status<em>*</em></legend>
     <select multiple class="form-control" id="exampleFormControlSelect2">
@@ -69,19 +75,7 @@ textarea {
   </fieldset>
   <p><input type="submit" name="Soummettre"></p>
 
-      <?php
-$Connect = new Connect();
-$dbh = new PDO('mysql:host=localhost;dbname='.$Connect->getTable().';charset=utf8', $Connect->get_user(), $Connect->get_passwd());
-$stmt = $dbh->prepare("INSERT INTO bug (id,titre,description,status) VALUES (:id, :titre, :desc, :status)");
-if(isset($_POST['Soummettre'])){ // si formulaire soumis 
-$ID = NULL;
-$stmt->bindParam(':id',$ID);
-$stmt->bindParam(':titre', $_POST['Titre']);
-$stmt->bindParam(':desc', $_POST['Description']);
-$stmt->bindParam(':status', $_POST['status']);
-$stmt->execute();
-}
-?>
+
 </form>
 <a href="list.php"><input class="favorite styled "type="button" value="Retour"</a>
 </body>

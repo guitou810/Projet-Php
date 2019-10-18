@@ -2,9 +2,9 @@
 include 'bugManager.php';
 $id = $_GET['id'];
 $Bugs = [];
-$bugmanager = new bugManager($Bugs);
-$Bugs = $bugmanager->load();
-$Bugss = $bugmanager->get_bug_id($id-1);
+$bugmanager = new bugManager();
+$Bugs = $bugmanager->find_all();
+$Bugss = $bugmanager->find($id);
 
 
 ?>
@@ -27,6 +27,7 @@ $Bugss = $bugmanager->get_bug_id($id-1);
         </div>"
 
         ?>
+        <a href="list.php"><input class="favorite styled "type="button" value="Retour"</a>
     </body>
 
 </html>

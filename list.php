@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 include 'bugManager.php';
 $Bugs = [];
 $bugmanager = new bugManager($Bugs);
-$Bugs = $bugmanager->load();
+$Bugs = $bugmanager->find_all();
 
 ?>
 <html>
@@ -23,6 +23,7 @@ $Bugs = $bugmanager->load();
                 <th scope="col">ID</th>
                 <th scope="col">TITRE</th>
                 <th scope="col">DESCRIPTION</th>
+                <th scope="col">DATE</th>
                 <th scope="col">STATUS</th>
                 <th scope="col">SHOW</th>
             </tr>
@@ -34,6 +35,7 @@ $Bugs = $bugmanager->load();
                     <td scope='row'>" . $bugs->getId() . "</td>
                     <td scope='row'>" . $bugs->getDescription() . "</td>
                     <td scope='row'>" . $bugs->get_title() . "</td>
+                    <td scope='row'>" . $bugs->get_date() ."</td>
                     <td scope='row'>" . $bugs->get_status() . "</td>
                     <td scope='row'> <a href='show.php?id=".$bugs->getId()."'><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=show:".$bugs->getId()."></a> </td>
                         

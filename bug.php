@@ -4,6 +4,7 @@ class Bug {
     private $_id;
     private $_description;
     private $_title ;
+    private $_date;
     private $_status;
             
             
@@ -25,10 +26,11 @@ class Bug {
        $this->_description = $_description;
 }
 
-    function __construct($_id, $_description, $_title, $_status) {
+    function __construct($_id, $_description, $_title, $_date,$_status) {
         $this->_id = $_id;
         $this->_title = $_title;
         $this->_description = $_description;
+        $this->_date = $_date;
         $this->_status = $_status;
         
 }
@@ -47,6 +49,14 @@ function get_title() {
 function set_title($_title) {
     $this->_title = $_title;
 }
+function get_date() {
+    return $this->_date;
+}
+
+function set_date($_date) {
+    $this->_date = $_date;
+}
+
 
 
 
