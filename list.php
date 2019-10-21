@@ -1,8 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 include 'bugManager.php';
-$Bugs = [];
-$bugmanager = new bugManager($Bugs);
+$bugmanager = new bugManager();
 $Bugs = $bugmanager->find_all();
 
 ?>

@@ -5,7 +5,6 @@
     private $_user='root';
     
     function __construct() {
-
     }
     function getTable() {
         return $this->table;

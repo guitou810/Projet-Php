@@ -1,9 +1,11 @@
 <?php
-include 'ConnexionBDD.php';
+
 include 'bugManager.php';
 $bugmanager = new bugManager();
 if(isset($_POST['Soummettre'])){
-    $Bugs = $bugmanager->add();
+    $ID = NULL;
+    $Bug = new Bug($ID,$_POST['Titre'],$_POST['Description'], $_POST['Date'],$_POST['Status']);
+    $bugmanager->add($Bug);
 }
 
 ?>
@@ -64,12 +66,12 @@ textarea {
   </fieldset>
   <fieldset>
     <legend>Date<em>*</em></legend>
-    <input type="date" value="2018-07-22">
+    <input type="date" value="2018-07-22" name="Date">
   </fieldset>
     <fieldset>
     <legend>Status<em>*</em></legend>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>0 </option>
+    <select multiple class="form-control" id="exampleFormControlSelect2" name="Status">
+      <option selected="selected">0 </option>
       <option>1 </option>
     </select>
   </fieldset>

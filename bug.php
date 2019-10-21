@@ -13,7 +13,7 @@ class Bug {
         return $this->_id;
         
 }
-    public function getDescription (){
+    public function getDescription(){
         return $this->_description;
         
 }
