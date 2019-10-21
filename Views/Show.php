@@ -1,14 +1,7 @@
 <?php
-include 'bugManager.php';
-$id = $_GET['id'];
-$Bugs = [];
-$bugmanager = new bugManager();
-$Bugs = $bugmanager->find_all();
-$Bugss = $bugmanager->find($id);
-
+require_once('../Controllers/index.php');
 
 ?>
-
 <html>
     
     <body>
@@ -27,7 +20,7 @@ $Bugss = $bugmanager->find($id);
         </div>"
 
         ?>
-        <a href="list.php"><input class="favorite styled "type="button" value="Retour"</a>
+        <a href="list.php"><input class="favorite styled "type="button" value="Retour" name="action"</a>
     </body>
 
 </html>

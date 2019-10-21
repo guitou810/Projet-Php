@@ -1,8 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-include 'bugManager.php';
-$bugmanager = new bugManager();
-$Bugs = $bugmanager->find_all();
+require_once('../Controllers/index.php');
 
 ?>
 <html>
