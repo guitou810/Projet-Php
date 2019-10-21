@@ -22,24 +22,8 @@ require_once('../Controllers/index.php');
                 <th scope="col">DATE</th>
                 <th scope="col">STATUS</th>
                 <th scope="col">SHOW</th>
-            </tr>
-            <?php
-            foreach ($Bugs as $bugs) {
-                echo
-                "<tbody>
-                <tr>
-                    <td scope='row'>" . $bugs->getId() . "</td>
-                    <td scope='row'>" . $bugs->getDescription() . "</td>
-                    <td scope='row'>" . $bugs->get_title() . "</td>
-                    <td scope='row'>" . $bugs->get_date() ."</td>
-                    <td scope='row'>" . $bugs->get_status() . "</td>
-                    <td scope='row'> <a href='show.php?id=".$bugs->getId()."'><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=show:".$bugs->getId()."></a> </td>
-                        
-                </tr>
-            </tbody>";
-            }
-            ?>
-            
+            </tr> 
+        <?= $content ?>
         </table>
         
     </body>

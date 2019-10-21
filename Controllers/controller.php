@@ -14,7 +14,7 @@ function Ajout(){
 function list1(){
     $bugmanager = new bugManager();
     $Bugs = $bugmanager->find_all();
-    require("list.php");
+    require("templateList.php");
 }
 
 function show() {
@@ -22,7 +22,7 @@ function show() {
     $id = $_GET['id'];
     $Bugs = [];
     $Bugss = $bugmanager->find($id);
-    require("show.php");
+    require("templateshow.php");
 }
 
 ?>
