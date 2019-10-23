@@ -72,6 +72,6 @@ textarea {
 
 
 </form>
-<a href="list.php"><input class="favorite styled "type="button" value="Retour"</a>
+<a href="../Controllers/index.php"><input class="favorite styled "type="button" value="Retour"</a>
 </body>
 </html>

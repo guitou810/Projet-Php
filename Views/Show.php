@@ -6,8 +6,8 @@ require_once('../Controllers/index.php');
     
     <body>
         <h1>BUG INFORMATIONS</h1>
-
-        <a href="list.php"><input class="favorite styled "type="button" value="Retour" name="action"</a>
+        <?= $content2 ?>
+        <a href="../Controllers/index.php"><input class="favorite styled "type="button" value="Retour" name="action"</a>
     </body>
 
 </html>

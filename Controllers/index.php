@@ -1,9 +1,9 @@
 <?php
 
 require_once('controller.php');
-
+echo $_SERVER['SCRIPT_NAME'];
 if (isset($_SERVER['SCRIPT_NAME'])) {
-    if ($_SERVER['SCRIPT_NAME'] == '/dashboard/works/Appli/Views/list.php') {
+    if ($_SERVER['SCRIPT_NAME'] == '/dashboard/works/Appli/Controllers/index.php') {
             list1();
     }
     elseif ($_SERVER['SCRIPT_NAME'] == '/dashboard/works/Appli/Views/show.php'){

@@ -1,5 +1,5 @@
 <?php
-require_once('../Controllers/index.php');
+include_once('../Controllers/index.php');
 
 ?>
 <html>
@@ -12,7 +12,7 @@ require_once('../Controllers/index.php');
             <thead>
                 <tr>
                     <th scope="col" colspan="4" id="titre" >BUG LIST</th>
-                    <th scope="col" ><a href="ajoutbug.php"><input class="btn btn-info" type="button" value="Add Bugs"</a></th>
+                    <th scope="col" ><a href="../Views/ajoutbug.php"><input class="btn btn-info" type="button" value="Add Bugs"</a></th>
                 </tr>
             </thead>
             <tr>
