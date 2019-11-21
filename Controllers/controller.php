@@ -17,13 +17,11 @@ class bugController{
         return $this->sendHttpResponse($content,200);
     }
     public function add(){
-        if(isset($_POST['submit'])){
+        if(isset($_POST["Titre"])){
             $bugManager = new bugManager();
-            $bug = new Bug();
-            $bug->setTitre($_POST["Titre"]);
-            $bug->setDescription($_POST("description"));
-            $bugManager->add($bug);
-            header('Location: list.php');
+            $Bug = new Bug(null,$_POST['Titre'],$_POST['Description'],$_POST['Date'],$_POST['Status']);
+            $bugManager->add($Bug);
+            header('Location: list');
         }else{
            $content = $this->render('Views/ajoutbug.php',[]);
            return $this->sendHttpResponse($content,200);

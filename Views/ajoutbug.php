@@ -39,7 +39,7 @@ textarea {
 }
 </style>
 <h2>Ajouter un Bug</h2>
-<form action="#" method="post">
+<form action="" method="post">
   <p><i>Complétez le formulaire. Les champs marqué par </i><em>*</em> sont <em>obligatoires</em></p>
   <fieldset>
     <legend>ID</legend>
@@ -69,6 +69,6 @@ textarea {
 
 
 </form>
-<a href="index.php"><input class="favorite styled "type="button" value="Retour"</a>
+<a href="list"><input class="favorite styled "type="button" value="Retour"</a>
 </body>
 </html>
