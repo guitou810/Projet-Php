@@ -3,8 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/acceuil.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/Show.php</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/data.txt</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/bugManager.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/.htaccess</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/bug.php</file>
@@ -12,9 +12,8 @@
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Controllers/controller.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/ConnexionBDD.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/HtmlPage.html</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Controllers/templateshow.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Controllers/templateList.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Controllers/index.php</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/acceuil.php</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/index.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/list.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/Manager.php</file>
         </group>

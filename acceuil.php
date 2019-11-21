@@ -11,7 +11,7 @@
         text-align: center;
       }
       body{
-          background-image: url("../image/fond image.jpg");
+          background-image: url("image/fond image.jpg");
       }
       button {
           margin-top:22%;
@@ -22,10 +22,12 @@
       }
   </style>
   <body>
+
       <h1>
-<div class="font-effect-neon">Accueil</div>
+            <div class="font-effect-neon">Accueil</div>
       </h1>
-      <a href="../Controllers/index.php"><button type="button" class="btn btn-outline-primary btn-lg ">Ready</button></a>
+      <a href="list"><button type="button" class="btn btn-outline-primary btn-lg ">Ready</button></a>
+
   </body>
 </html>
 

@@ -1,7 +1,4 @@
-<?php
-require_once('../Controllers/index.php');
 
-?>
 <html>
     <body>
 <style>
@@ -72,6 +69,6 @@ textarea {
 
 
 </form>
-<a href="../Controllers/index.php"><input class="favorite styled "type="button" value="Retour"</a>
+<a href="index.php"><input class="favorite styled "type="button" value="Retour"</a>
 </body>
 </html>

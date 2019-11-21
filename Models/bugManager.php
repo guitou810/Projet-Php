@@ -2,7 +2,6 @@
 
 include_once('bug.php');
 include_once('Manager.php');
-include_once('../Controllers/index.php');
 
 class bugManager extends ConnectBDD{
     private $_bugs = [];
