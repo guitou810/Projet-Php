@@ -1,15 +1,19 @@
 <?php
 
-include_once('bug.php');
-include_once('Manager.php');
+#include_once('bug.php');
+#include_once('Manager.php');
 
-class bugManager extends ConnectBDD{
+namespace BugApp\Models;
+use BugApp\Models\Bug;
+use BugApp\Models\Manager;
+
+class bugManager extends Manager{
     private $_bugs = [];
 
 
     function find($id){
         $dbh=$this->connectDB();
-        $bugs = $dbh->query("SELECT * FROM `bug` ORDER BY id='$id'",PDO::FETCH_ASSOC);
+        $bugs = $dbh->query("SELECT * FROM `bug` ORDER BY id='$id'",\PDO::FETCH_ASSOC);
         while($donnees = $bugs->fetch()){     
                $Bug = new Bug($donnees['id'],$donnees['titre'],$donnees['description'],$donnees['createdAt'],$donnees['closed']);       
         }
@@ -19,7 +23,7 @@ class bugManager extends ConnectBDD{
     // load sur base de données
     function find_all(){
         $dbh=$this->connectDB();
-        $bugs = $dbh->query('SELECT * FROM `bug` ORDER BY `id`',PDO::FETCH_ASSOC);
+        $bugs = $dbh->query('SELECT * FROM `bug` ORDER BY `id`',\PDO::FETCH_ASSOC);
         if (!$bugs) {
                 echo "\nPDO::errorInfo():\n";
                 print_r($dbh->errorInfo());
@@ -42,6 +46,32 @@ class bugManager extends ConnectBDD{
         $stmt->execute();
   
     }
+    
+    
+    function updateStatus ($bug){
+       $dbh=$this->connectDB();
+       $stmt = $dbh->prepare("UPDATE `bug` SET `titre`=:titre, `description`=:desc,`closed`=:closed WHERE `id`=:id"); 
+       $stmt->execute([
+           ':titre'=>$bug->get_title(),
+           ':desc'=>$bug->getDescription(),
+           ':closed'=>$bug->get_status(),
+           ':id'=>$bug->getId()
+ ]);
+    } 
+    function findByStatut(){
+        $dbh=$this->connectDB();
+        $bugs = $dbh->query("SELECT * FROM `bug` WHERE closed=0",\PDO::FETCH_ASSOC);
+        while($donnees = $bugs->fetch()){     
+               $Bug = new Bug($donnees['id'],$donnees['titre'],$donnees['description'],$donnees['createdAt'],$donnees['closed']);
+               $this->_bugs[]=$Bug;
+        }
+        return $this->_bugs;
+        
+    }
+       
+       
+
+    
 
     
     

@@ -1,0 +1,12 @@
+{
+    "name": "eleve/appli",
+    "description": "AppliBug",
+    "require": {},
+        "autoload": {
+            "psr-4": {
+                "BugApp\\":"src/"
+            }
+        }
+
+    
+}

@@ -3,18 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/Show.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/data.txt</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/bugManager.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/.htaccess</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/bug.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/ajoutbug.php</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Ressources/ajax.js</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/modify.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Controllers/controller.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/HtmlPage.html</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/acceuil.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/index.php</file>
+            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/HtmlPage.html</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Views/list.php</file>
-            <file>file:/C:/xampp/htdocs/dashboard/works/Appli/Models/Manager.php</file>
             <file>file:/C:/xampp/htdocs/dashboard/works/Appli/params.php</file>
         </group>
     </open-files>

@@ -1,5 +1,6 @@
 <?php
 
+namespace BugApp\Models;
 class Bug {
     private $_id;
     private $_description;
