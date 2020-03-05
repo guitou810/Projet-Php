@@ -45,6 +45,7 @@ switch(true) {
 
 
 
+
     default :
         return (new bugController())->list();
         

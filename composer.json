@@ -1,7 +1,9 @@
 {
     "name": "eleve/appli",
     "description": "AppliBug",
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "^6.5"
+    },
         "autoload": {
             "psr-4": {
                 "BugApp\\":"src/"

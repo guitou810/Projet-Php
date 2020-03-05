@@ -22,8 +22,10 @@
                 <th scope="col">DESCRIPTION</th>
                 <th scope="col">DATE</th>
                 <th scope="col"></th>
-                <th scope="col">SHOW</th>
                 <th scope="col">STATUT</th>
+                <th scope="col">NON DE DOMAINE</th>
+                <th scope="col">ADDRESS IP</th>
+                <th scope="col">SHOW</th>
                 <th scope="col">MODIFY</th>
             </tr> 
         <?php
@@ -43,6 +45,8 @@
                     <td scope='row'>" . $bug->get_title() . "</td>
                     <td scope='row'>" . $bug->get_date() ."</td>
                     <td scope='row'>" . $etat . "</td>
+                    <td scope='row'>" . $bug->get_ndd() ."</td>
+                    <td scope='row'>" . $bug->get_ip() ."</td>
                     <td scope='row'> <a href=show$".$bug->getId()."><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=show:".$bug->getId()."></a> </td>
                     <td scope='row'> <a href=modify?".$bug->getId()."><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=modify.></a> </td> 
                 </tr>

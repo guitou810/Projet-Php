@@ -2,6 +2,7 @@
 namespace BugApp\Controllers;
 #require_once('Models/bugManager.php');
 use BugApp\Models\bugManager;
+use BugApp\Models\bug;
 
 class bugController{
     
@@ -54,7 +55,8 @@ class bugController{
     public function add(){
         if(isset($_POST["Titre"])){
             $bugManager = new bugManager();
-            $Bug = new Bug(null,$_POST['Titre'],$_POST['Description'],$_POST['Date'],$_POST['Status']);
+            $domain = $bugManager->appel_api($_POST['NDD']);
+            $Bug = new Bug(null,$_POST['Titre'],$_POST['Description'],$_POST['Date'],$_POST['Status'],$_POST['NDD'],$domain);
             $bugManager->add($Bug);
             header('Location: list');
         }else{
@@ -100,6 +102,11 @@ class bugController{
             return $this->sendHttpResponse($content,200);
         }
 
+    }
+
+    public function RequestApi(){
+        $manager = new bugManager();
+        $bug = $manager->appel_api();
     }
     
         

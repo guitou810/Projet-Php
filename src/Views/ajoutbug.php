@@ -65,6 +65,10 @@ textarea {
       <option>1 </option>
     </select>
   </fieldset>
+  <fieldset>
+    <legend>NON DE DOMAINE<em>*</em></legend>
+    <input id="NDD" autofocus="" required="" name="NDD"><br>
+  </fieldset>
   <p><input type="submit" name="action"></p>
 
 

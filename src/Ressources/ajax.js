@@ -68,7 +68,7 @@ function alertContente(){
         console.log(xhr.responseText);
         let tabl = JSON.parse(xhr.responseText);
         //console.log(tabl['bugs']);
-        Content ="<tr><th scope='col'>ID</th><th scope='col'>TITRE</th><th scope='col'>DESCRIPTION</th><th scope='col'>DATE</th><th scope='col'></th><th scope='col'>SHOW</th><th scope='col'>STATUT</th><th scope='col'>MODIFY</th></tr>" 
+        Content ="<tr><th scope='col'>ID</th><th scope='col'>TITRE</th><th scope='col'>DESCRIPTION</th><th scope='col'>DATE</th><th scope='col'>NOM DE DOMAINE</th><th scope='col'>ADRESS IP</th><th scope='col'>STATUT</th><th scope='col'>SHOW</th><th scope='col'>MODIFY</th></tr>" 
         Contentt ="";
         for (i =0; i<tabl['bugs'].length; i++){
         element=tabl['bugs'][i];
@@ -86,7 +86,9 @@ function alertContente(){
                 "<td scope='row'>" + element.description + "</td>"+
                 "<td scope='row'>" + element.titre + "</td>"+
                 "<td scope='row'>" + element.createdAt +"</td>"+
-                "<td scope='row'>" + etat + "</td>"+
+                "<td scope='row'>" + element.NDD +"</td>"+
+                "<td scope='row'>" + element.IP +"</td>"+
+                etat +
                 "<td scope='row'> <a href=show$"+element.id+"><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=show:"+element.id+"></a> </td>"+
                 "<td scope='row'> <a href=modify?"+element.id+"><input class='favorite styled 'type='button' style='background-color: #4CAF50; color:white' value=modify.></a> </td>"+
             "</tr>"+

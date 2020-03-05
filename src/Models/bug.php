@@ -7,6 +7,8 @@ class Bug {
     private $_title ;
     private $_date;
     private $_status;
+    private $_NDD;
+    private $_IP;
             
             
     
@@ -27,12 +29,14 @@ class Bug {
        $this->_description = $_description;
 }
 
-    function __construct($_id, $_description, $_title, $_date,$_status) {
+    function __construct($_id, $_description, $_title, $_date,$_status,$_NDD,$_IP) {
         $this->_id = $_id;
         $this->_title = $_title;
         $this->_description = $_description;
         $this->_date = $_date;
         $this->_status = $_status;
+        $this->_NDD = $_NDD;
+        $this->_IP = $_IP;
         
 }
 function get_status() {
@@ -58,8 +62,21 @@ function set_date($_date) {
     $this->_date = $_date;
 }
 
+function set_ndd($_NDD) {
+    $this->_NDD = $_NDD;
+}
 
+function get_ndd(){
+    return $this->_NDD;
+}
 
+function set_ip($_IP){
+    $this->_IP = $_IP;
+}
+
+function get_ip(){
+    return $this->_IP;
+}
 
 }
 
