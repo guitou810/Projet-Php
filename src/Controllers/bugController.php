@@ -55,7 +55,10 @@ class bugController{
     public function add(){
         if(isset($_POST["Titre"])){
             $bugManager = new bugManager();
-            $domain = $bugManager->appel_api($_POST['NDD']);
+            $url = $_POST['URL'];
+            $host = parse_url($url);
+            $domain = $bugManager->appel_api($host['host']);
+            //$domain = $bugManager->appel_api($_POST['NDD']);
             $Bug = new Bug(null,$_POST['Titre'],$_POST['Description'],$_POST['Date'],$_POST['Status'],$_POST['NDD'],$domain);
             $bugManager->add($Bug);
             header('Location: list');

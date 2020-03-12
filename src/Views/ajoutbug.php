@@ -1,5 +1,8 @@
 
 <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
     <body>
 <style>
     p {
@@ -66,13 +69,18 @@ textarea {
     </select>
   </fieldset>
   <fieldset>
+    <legend>URL<em>*</em></legend>
+    <input id="URL" autofocus="" required="" name="URL"><br>
+  </fieldset>
+  <fieldset>
     <legend>NON DE DOMAINE<em>*</em></legend>
-    <input id="NDD" autofocus="" required="" name="NDD"><br>
+    <input id="NDD" autofocus="" required="" name="NDD" onclick="getfocus()" ><br> 
   </fieldset>
   <p><input type="submit" name="action"></p>
 
 
 </form>
-<a href="list"><input class="favorite styled "type="button" value="Retour"</a>
+<a href="list"><input class="favorite styled "type="button" value="Retour"></a>
 </body>
+<script src="src/Ressources/ajout.js"></script>
 </html>
